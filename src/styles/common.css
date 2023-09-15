@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "Impact", sans-serif;
+  src: url(../fonts/impact.woff2);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.big-container {
+  max-width: 1220px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 920px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+/* .promo {
+  background: url(../images/promo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+} */
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  color: #040404;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 400;
+}
