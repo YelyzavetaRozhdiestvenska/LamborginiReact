@@ -33,26 +33,34 @@ let siteData = [
 
 
 
-function Container({ title, text1, text2, image, imageStyle}) {
-    return (
-        <div className="info_part"> 
-            {siteData.map((site) => <h3 className="info_title">{title}</h3>)}
-            <div className="info_part-textbox">
-                {siteData.map((site) => <p className="info_text">{text1}</p>)}
-                {siteData.map((site) => <b className="info_text">{text2}</b>)}
-            </div>
-            {siteData.map((site) => <img className="info_part-img">{image}</img>)}
-        </div>
+// function Container({ title, text1, text2, image, imageStyle}) {
+//     return (
+//         <div className="info_part"> 
+//             {siteData.map((site) => <h3 className="info_title">{title}</h3>)}
+//             <div className="info_part-textbox">
+//                 {siteData.map((site) => <p className="info_text">{text1}</p>)}
+//                 {siteData.map((site) => <b className="info_text">{text2}</b>)}
+//             </div>
+//             {siteData.map((site) => <img className="info_part-img">{image}</img>)}
+//         </div>
       
-  );
-}
+//   );
+// }
 
-
-
-
+// function Container({ title, text1, text2, image, imageStyle}) {
+//     return (       
+//             {siteData.map((site) => <div className="info_part"><h3 className="info_title">{title}</h3>
+//             <div className="info_part-textbox">
+//                 <p className="info_text">{text1}</p>
+//                 <b className="info_text">{text2}</b>
+//                 <img className="info_part-img">{image}</img>
+//                 </div></div>)}
+        
+//         );
+// }
 
  
-export default Container;
+// export default Container;
 
-// строка 38???
+
 // как правильно прописать таблицу?
