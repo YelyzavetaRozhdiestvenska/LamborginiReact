@@ -10,42 +10,30 @@
 // [[], [], []] => [{}, {}, {}]
 
 const pets = [
-  {
-    animal: "cat",
-    loc: "home",
-    say: "meow",
-  },
-  {
-    animal: "dog",
-    loc: "garden",
-    say: "woof",
-  },
-  {
-    animal: "horse",
-    loc: "forest",
-    say: "iho",
-  },
+  ["cat", "home", "meow"],
+  ["dog", "garden", "woof"],
+  ["horse", "forest", "iho"],
 ];
 
-for (const pet of pets) {
-  console.log(pet);
+function petInfoObject(animal, loc, say) {
+  const pet = { animal, loc, say };
+  return pet;
 }
 
-const petAnimals = [];
-for (const pet of pets) {
-  petAnimals.push(pet.animal);
+function arrayOfObjects(pets) {
+  const res = pets.map((pet) => petInfoObject(pet[0], pet[1], pet[2]));
+  return res;
 }
-console.log(petAnimals);
 
-// [pets].map(i => {i.animal, i.loc, i.say => console.log() });
+console.log(arrayOfObjects(pets));
 
-// Задача 2
-// Функция принимает объект: {movie: "Akiba", year: 1965, director: "Akira Kurosawa"}
-// Выводит:
-// - все ключи объекта
-// - все значения по ключам объекта
-// - ключи и значения вместте
-// Каждый вывод не зависит от предыдущего
+// // Задача 2
+// // Функция принимает объект: {movie: "Akiba", year: 1965, director: "Akira Kurosawa"}
+// // Выводит:
+// // - все ключи объекта
+// // - все значения по ключам объекта
+// // - ключи и значения вместте
+// // Каждый вывод не зависит от предыдущего
 
 const video = {
   movie: "Akiba",
@@ -62,22 +50,42 @@ console.log(values);
 const entries = Object.entries(video);
 console.log(entries);
 
-// Задача 3
+// // Задача 3
 
-// Функция принимает текст и возвращает количество символов в нем
+// // Функция принимает текст и возвращает количество определнных символов в нем
+
+function countCharacter(message, char) {}
 
 let message = "Сколько символов?";
 console.log(message.length);
 
-// let message = 'message';
-// function QuantitiMessage (message => message.lenght) {
-//     console.log(message);
-// }
+// // let message = 'message';
+// // function QuantitiMessage (message => message.lenght) {
+// //     console.log(message);
+// // }
 
-// const message = " ";
-// console.log(message.length);
+// // const message = " ";
+// // console.log(message.length);
 
-// Запуск: node exaples.js
+// // Запуск: node exaples.js
 
-// Задача 4
-// Залить в репозиторий на гитхабе
+// // Задача 4
+// // Залить в репозиторий на гитхабе
+
+function sum(a, b) {
+  return a + b;
+}
+
+// Задача 5
+// Функция принимает один аргумент
+// Если этот аргумент не является массивом, вернуть ошибку
+// Еслии массив, вывести тип каждого элемента в нем
+
+// Задача 6
+// Функция принимает массив и два числа
+// Возвращает слайс массива по этим двум числам
+// То есть, если числа 2 и 10, вернуть слайс массив по индеку 2-10
+// Если одно из чисел больше длинны массива, вызвать ошибку
+
+// Задача 7 со звездочкой
+// Функция считывает содержимое txt файла и возвращает его
