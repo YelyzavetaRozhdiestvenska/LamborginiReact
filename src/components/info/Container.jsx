@@ -29,7 +29,7 @@ function Container({ siteData}) {
             <div className="info_part-textbox">
                 <p className="info_text">{i.text1}</p>
                 <b className="info_text">{i.text2}</b>
-                {/* <img className="info_part-img">{i.image}</img> */}
+                <img className="info_part-img" src={info1}></img>
                 </div></div>)}
         </div>);
 }

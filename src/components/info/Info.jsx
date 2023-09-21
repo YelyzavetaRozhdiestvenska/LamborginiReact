@@ -2,6 +2,8 @@ import "./info.css"
 import "./../../styles/reset.css"
 import "./../../styles/common.css"
 import Container from "./Container.jsx"
+
+
 let siteData = [
   {
     title: "СУПЕР ТРОФЕО МИРОВОЙ ФИНАЛ",
