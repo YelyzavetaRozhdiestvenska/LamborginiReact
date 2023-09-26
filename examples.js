@@ -61,7 +61,6 @@ function videoEntries(video) {
   const entries = Object.entries(video);
   return entries;
 }
-
 console.log(videoEntries(video));
 
 // const keys = Object.keys(video);
@@ -123,7 +122,6 @@ function typeElement(massivElement) {
   } else {
     result = massivElement.forEach((item) => console.log(typeof item));
   }
-  return result;
 }
 
 console.log(typeElement(["cat", 35, null]));
@@ -137,7 +135,7 @@ console.log(typeElement(["cat", 35, null]));
 
 function masivSlice(massive, a, b) {
   if (a > massive.length || b > massive.length) {
-    result = "Введите другое число";
+    throw new Error("Введите другое число");
   } else {
     result = massive.slice(a, b);
   }

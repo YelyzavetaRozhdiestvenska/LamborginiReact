@@ -9,7 +9,7 @@ const menuLinkRight = ["Купить билеты", "Смотреть онлай
 
 
 function Nav () {
-    return (<div>
+    return (<div className="nav">
         <ul className="menu-list menu-left">
             {menuLinkLeft.map(link => <MenuLink>{ link }</MenuLink> )}
         </ul>
