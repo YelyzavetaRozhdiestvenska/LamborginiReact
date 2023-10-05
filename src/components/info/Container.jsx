@@ -2,20 +2,32 @@ import "./info.css"
 import "./../../styles/reset.css"
 import "./../../styles/common.css"
 
+function Article({ children }) {
 
-function Container({ children }) {
-    return (<div className="info_part" style={children.imageStyle}>  
-             <div> <h3 className= "info_title">{children.title}</h3>
-            <div className="info_part-textbox">
-                <p className="info_text">{children.text1}</p>
-                <b className="info_text">{children.text2}</b>
-                <img className="info_part-img" src={children.image}></img>
-                </div></div>
-        </div>);
+    return <ArticleContainer imageStyle={children.imageStyle}>
+            <ArticleTitle title={children.title} />
+            <ArticleText text={children.text1} textStyle={children.text1Style}/>
+            <ArticleText text={children.text2} textStyle={children.text2Style} />
+            <ArticleImage image={children.image} />
+        </ArticleContainer>
 }
 
+function ArticleContainer({ children, imageStyle }) {
+    return <div className={`info_part ${imageStyle}`}> 
+        <div className="info_part-textbox">{children}</div>
+    </div>    
+}
 
-export default Container;
+function ArticleTitle({ title }) {
+    return <h3 className="info_title">{title}</h3> 
+}
 
+function ArticleText({ text, textStyle }) {
+    return <p className={textStyle}>{text}</p>
+}
 
-// как правильно прописать таблицу?
+function ArticleImage({image}) {
+    return <img className="info_part-img" src={image}></img>
+}
+
+export default Article;

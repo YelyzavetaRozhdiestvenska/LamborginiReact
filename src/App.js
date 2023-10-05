@@ -53,6 +53,9 @@
 import Header from "./components/header/Header.jsx";
 import Promo from "./components/promo/Promo.jsx";
 import Info from "./components/info/Info.jsx";
+import Track from "./components/track/Track.jsx";
+import Evo from "./components/evo/Evo.jsx";
+import Blog from "./components/blog/Blog.jsx";
 
 function App() {
   return (
@@ -63,6 +66,9 @@ function App() {
         <span>3-6 ноября</span>
       </Promo>
       <Info />
+      <Track />
+      <Evo />
+      <Blog />
     </div>
   );
 }
